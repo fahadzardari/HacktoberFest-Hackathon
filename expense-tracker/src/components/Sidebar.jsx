@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import { signOut } from "../services/auth.service";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function Sidebar({ isOpen, toggleSidebar }) {
@@ -78,9 +78,8 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
 
         <li className="px-6 py-3 ">
           <p
-            onClick={() => {
-              // removeToken();
-              // window.location.reload();
+            onClick={ () => {
+               signOut();
             }}
             className="text-gray-300 hover:text-white cursor-pointer"
           >
