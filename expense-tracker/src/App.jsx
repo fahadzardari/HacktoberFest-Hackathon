@@ -1,15 +1,22 @@
-import { useState } from 'react'
+import {
+  Route,
+  RouterProvider,
+  Routes,
+  createBrowserRouter,
+} from "react-router-dom";
+import Home from "./pages/Home";
 
-function App() {
 
+const router = createBrowserRouter([{ path: "*", Component: Root }]);
 
+function Root() {
   return (
-    <>
-      <div className='text-center mx-auto w-full'>
-        <h1>Expense Tracker</h1>
-      </div>
-    </>
-  )
+    <Routes>
+      <Route path="*" element={<Home />} />
+    </Routes>
+  );
 }
 
-export default App
+export default function App() {
+  return <RouterProvider router={router} />;
+}
