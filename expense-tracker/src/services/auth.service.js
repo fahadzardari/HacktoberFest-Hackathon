@@ -5,32 +5,33 @@ import { auth } from "../../firebase.js";
 const provider = new GoogleAuthProvider();
 
 const signUpWithEmail = async (email, password) => {
-    await createUserWithEmailAndPassword(auth, email, password)
+  const userCredential = await createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
-        // ...
+        window.location.href = "/login";
+        console.log(user);
+        
     })
     .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
+        console.log("My Error: "+ errorMessage);
     });
 
 }
 
 const signInWithEmail = async (email, password) => {
-  await signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      console.log(user);
-      
-      // ...
+  const userCredential  = await signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    window.location.href = "/";
+    console.log(user);
     })
     .catch((error) => {
-      const errorCode = error.code;
       const errorMessage = error.message;
+      console.log("My Error: "+ errorMessage);
+      
   });
 }
 

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { signInWithGoogle, signInWithEmail } from "../services/auth.service.js";
 
 function Login() {
-    const [email, setEmail] = useState("11");
-    const [password, setPassword] = useState("11");
+    const [email, setEmail] = useState("0");
+    const [password, setPassword] = useState("0");
     return (
         <>
             <div>
