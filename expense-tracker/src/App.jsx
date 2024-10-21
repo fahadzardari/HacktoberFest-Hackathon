@@ -12,6 +12,7 @@ const router = createBrowserRouter([{ path: "*", Component: Root }]);
 function Root() {
   return (
     <Routes>
+      
       <Route path="*" element={<Home />} />
     </Routes>
   );
