@@ -37,6 +37,12 @@ const signInWithEmail = async (email, password) => {
 
 const signInWithGoogle = async () => {
     const token = await signInWithRedirect(auth, provider);
+    if(token){
+      window.location.href = "/";
+    }
+    else {
+      alert("SOmething went wrong");
+    }
 }
 
 

@@ -35,6 +35,9 @@ export default function Sidebar({ isOpen, toggleSidebar }) {
         <Link to={"/"}>
           <li className="px-6 py-3 cursor-pointer">Dashboard</li>
         </Link>
+        <Link to={"/category"}>
+          <li className="px-6 py-3 cursor-pointer">Categories</li>
+        </Link>
         <li
           className="px-6 py-3 cursor-pointer"
           onClick={() => setDropDown(!dropDown)}

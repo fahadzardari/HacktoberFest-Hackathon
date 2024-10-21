@@ -25,7 +25,7 @@ export default function Navbar({toggleSidebar}) {
         </button>
         <div>
         {/* <img src="/primary-logo.png" alt="Logo" className="h-12"/> */}
-        <h1 className="text-xl">Something liken logo</h1>
+        <h1 className="text-xl uppercase">Expense Tracker</h1>
         </div>
         <div>
 
