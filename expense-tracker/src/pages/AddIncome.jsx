@@ -1,4 +1,4 @@
-function AddBudget() {
+function AddIncome() {
     const handleSubmit = async(e) =>{
         e.preventDefault();
         const source = e.target.source.value;
@@ -13,7 +13,7 @@ function AddBudget() {
     return (
         <>
             <div className="py-16">
-                <h2 className="text-2xl text-center py-4">Add Budget</h2>
+                <h2 className="text-2xl text-center py-4">Add Income</h2>
                 <form className="max-w-sm mx-auto" onSubmit={(e) => handleSubmit(e)}>
                     <div className="mb-5">
                         <label
@@ -46,7 +46,7 @@ function AddBudget() {
                         />
                     </div>
                     <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Add Budget
+                        Add Income
                     </button>
                 </form>
             </div>
@@ -54,4 +54,4 @@ function AddBudget() {
     );
 }
 
-export default AddBudget;
+export default AddIncome;
